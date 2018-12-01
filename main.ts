@@ -1,15 +1,24 @@
 import { GraphPoint } from './point';
 
-let pointA = new GraphPoint(2, 3);
-let pointB = new GraphPoint(4, 1);
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-// draw the points
-console.log('Point A is: ');
-pointA.draw();
-console.log('Point B is: ');
-pointB.draw();
+rl.question("What is point 's x value?", (pointAXRes) => {
+  rl.question("What is point A's y value?", (pointAYRes) => {
+    rl.question("What is point B's x value?", (pointBXRes) => {
+      rl.question("What is point B's y value?", (pointBYRes) => {
+        let pointA = new GraphPoint(pointAXRes, pointAYRes);
+        let pointB = new GraphPoint(pointBXRes, pointBYRes);
+        
+        // calculate distance and print to screen
+        let distance = pointA.getDistance(pointB);
+        console.log(`Distance between point A and point B is ${distance}`);
 
-// calculate distance and print to screen
-let PRECISION = 3;
-let distance = pointA.getDistance(pointB).toPrecision(PRECISION);
-console.log(`Distance between point A and point B is ${distance}`);
+        rl.close();
+      });
+    }); 
+  });
+});

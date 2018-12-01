@@ -1,0 +1,22 @@
+{
+  "name": "graphpoint",
+  "version": "1.0.0",
+  "description": "Program which demonstrates using Typescript to create a \"GraphPoint\" class.  The program takes the values of two points then calculates the distance between those points.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wynnblevins/GraphPoint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wynnblevins/GraphPoint/issues"
+  },
+  "homepage": "https://github.com/wynnblevins/GraphPoint#readme",
+  "dependencies": {
+    "@types/node": "^10.12.11"
+  }
+}
